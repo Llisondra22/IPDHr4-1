@@ -27,24 +27,22 @@ def move(my_history, their_history, my_score, their_score):
     # Decide whether to return 'c' or 'b'.
     
     
-    if len(my_history)%2==0:
-       return 'c'
-    else:
-       return 'b'
+   
       
    
-    if their_history[-1] == 'c':
-       return 'c'
+   
       
-       if len(their_history) =='c':
-           return 'c'
-       elif len(their_history) =='b':
-           return 'b'
-       elif their_history[-1] == 'b':
-           return 'b'
-       else:
-           return 'c'
+    if len(their_history) =='c':
+        return 'c'
+    elif len(their_history) =='b':
+        return 'b'
+    elif their_history[-1] == 'b':
+        return 'b'
+    else:
+        return 'c'
+   
     
+      
 def test_move(my_history, their_history, my_score, their_score, result):
     '''calls move(my_history, their_history, my_score, their_score)
     from this module. Prints error if return value != result.
